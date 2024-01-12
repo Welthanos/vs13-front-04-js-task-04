@@ -22,6 +22,19 @@ const printEvenAndIndex = () => {
 }
 
 // EX 03
+const alterNumbersOfList = () => {
+    const text = document.getElementById('alter-list');
+    const btn = document.getElementById('btn-section-3');
+    const list = [1.5, 6, 7.8, 19, 45, 89, 50.5, 25];
+    const indexToAlter = [0, 2, 5];
+
+    for (index of indexToAlter) list.splice(index, 1, (Math.random() * 100).toFixed(1));
+
+    text.innerHTML += `<br>Lista alterada:<br>[${list.join(', ')}]`;
+    btn.disabled = true;
+}
+
+
 
 // EX 04
 

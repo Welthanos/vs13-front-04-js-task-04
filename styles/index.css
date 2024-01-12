@@ -82,12 +82,3 @@ section {
 .section-2 h3 {
     overflow-y: hidden;
 }
-
-.section-3 span {
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-    font-size: 2rem;
-    padding: 0.5rem 1.5rem;
-    border-radius: 1000px;
-}
