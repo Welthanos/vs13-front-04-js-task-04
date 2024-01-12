@@ -54,6 +54,7 @@ const ageOfCastles = [
 // Para testar outras formas de resolver a questão
 const summarizeAOE = () => {
     const text = document.getElementById('aoe-summary');
+    const btn = document.getElementById('btn-section-4');
     const countBags = items => items.reduce((acc, item) => acc + Object.values(item)[0], 0);
 
     const formatItemList = items => items.map(item => {
@@ -74,11 +75,13 @@ const summarizeAOE = () => {
         <br><br> - Total de 4 tipos de itens com ${totalAOCBags} sacas`;
 
     text.style.display = 'inline';
+    btn.disabled = true;
 }
 
 // EX 05
 const showCheeseMenu = () => {
     const text = document.getElementById('cheese-menu');
+    const btn = document.getElementById('btn-section-5');
     const menu = ['Mussarela', 'Minas', 'Parmesão', 'Prato', 'Gorgonzola'];
 
     text.innerHTML = `${menu.join(', ')}.`;
@@ -93,9 +96,11 @@ const showCheeseMenu = () => {
 
     text.innerHTML += `<br><br><strong>Lista atualizada:</strong> ${menu2.join(', ')}.`;
     text.style.display = 'inline';
+    btn.disabled = true;
 }
 
 // EX 06
+
 
 // EX 07
 
