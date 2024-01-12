@@ -100,9 +100,64 @@ const showCheeseMenu = () => {
 }
 
 // EX 06
+const library = [
+    {
+        id: 1,
+        category: 'Terror',
+        title: 'It'
+    },
+    {
+        id: 2,
+        category: 'Terror',
+        title: 'O Exorcista'
+    },
+    {
+        id: 3,
+        category: 'Terror',
+        title: 'Drácula'
+    },
+    {
+        id: 4,
+        category: 'Romance',
+        title: 'O Morro dos Ventos Uivantes'
+    },
+    {
+        id: 5,
+        category: 'Policial',
+        title: 'O Silêncio dos Inocentes'
+    },
+    {
+        id: 6,
+        category: 'Suspense',
+        title: 'Boneco de Neve'
+    },
+    {
+        id: 7,
+        category: 'Suspense',
+        title: 'Bird Box'
+    },
+    {
+        id: 8,
+        category: 'Romance',
+        title: 'Orgulho e Preconceito'
+    },
+];
 
+const booksCatalog = () => {
+    const text = document.getElementById('books-catalog');
+    const btn = document.getElementById('btn-section-6');
+    const listAllBooks = library.map(book => book.title);
+    const listTerrorBooks = library.filter(book => book.category === 'Terror').map(terrorBook => terrorBook.title);
+
+
+    text.innerHTML = `<strong>O catálogo de livros da biblioteca é composto por:</strong><br><br> ${listAllBooks.join(', ')}. <br><br>
+        <strong>Os livros da categoria de terror da biblioteca são:</strong><br><br> ${listTerrorBooks.join(', ')}.`;
+    text.style.display = 'inline';
+    btn.disabled = true;
+}
 
 // EX 07
+
 
 // EX 08
 
