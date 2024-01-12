@@ -157,7 +157,19 @@ const booksCatalog = () => {
 }
 
 // EX 07
+const ranking = () => {
+    const text = document.getElementById('ranking');
+    const btn = document.getElementById('btn-section-7');
+    const medalsOfPosition = ['Ouro', 'Prata', 'Bronze', 'Sem medalha', 'Sem medalha'];
+    let position = 1;
 
+    const rankingOrder = medalsOfPosition.map(m => {
+        text.innerHTML += `Posição no campeonato - ${position++}º lugar --> Medalha de: ${m} <br>`;
+    });
+
+    text.style.display = 'inline';
+    btn.disabled = true;
+}
 
 // EX 08
 
