@@ -30,7 +30,9 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    overflow-y: hidden;
 }
 
 section {
@@ -64,21 +66,4 @@ section {
     label {
         font-size: 1.05rem;
     }
-}
-
-#result-1,
-#result-2 {
-    font-size: 1.06rem;
-    font-weight: 500;
-    margin: 1rem auto;
-    border: none;
-    background-color: rgb(156, 217, 187);
-}
-
-.section-1 div {
-    width: 100%;
-}
-
-.section-2 h3 {
-    overflow-y: hidden;
 }
