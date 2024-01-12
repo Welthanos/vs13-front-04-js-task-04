@@ -4,7 +4,7 @@ const printOrderedList = () => {
     const text = document.getElementById('ordered-list');
     const btn = document.getElementById('btn-section-1');
 
-    text.innerHTML += `<br>Lista ordenada:<br>[${list.sort().join(', ')}]`;
+    text.innerHTML += `<br><strong>Lista ordenada:</strong><br>[${list.sort().join(', ')}]`;
     btn.disabled = true;
 }
 
@@ -31,7 +31,7 @@ const alterNumbersOfList = () => {
 
     for (index of indexToAlter) list.splice(index, 1, (Math.random() * 50).toFixed(1));
 
-    text.innerHTML += `<br>Lista alterada:<br>[${list.join(', ')}]`;
+    text.innerHTML += `<br><strong>Lista alterada:</strong><br>[${list.join(', ')}]`;
     btn.disabled = true;
 }
 
