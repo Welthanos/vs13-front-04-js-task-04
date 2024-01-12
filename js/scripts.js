@@ -172,5 +172,31 @@ const ranking = () => {
 }
 
 // EX 08
+const handleNumericalSets = () => {
+    const text = document.getElementById('numerical-sets');
+    const btn = document.getElementById('btn-section-8');
+    const A = [2, 4, 6, 7, 8, 22, 45, 34, 89, 75, 62, 54];
+    const B = [22, 23, 57, 45, 77, 62, 56, 54, 97, 88, 33, 5];
+
+    const union = (a, b) => {
+        const merge = a;
+        for (number of b) if (!merge.includes(number)) merge.push(number);
+
+        return merge;
+    }
+    const intersection = (a, b) => a.filter(number => b.includes(number));
+    const difference = (a, b) => a.filter(number => !b.includes(number));
+
+    const order = (a, b) => a - b;
+
+    const unionResult = union(A, B).sort(order);
+    const intersectionResult = intersection(A, B).sort(order);
+    const differenceResult = difference(A, B).sort(order);
+
+    text.innerHTML += `<br><br> A ∪ B = [${unionResult.join(', ')}] <br><br> A ∩ B = [${intersectionResult.join(', ')}] <br><br>  A / B = [${differenceResult.join(', ')}]`;
+
+    text.style.display = 'inline';
+    btn.disabled = true;
+}
 
 // EX 09
