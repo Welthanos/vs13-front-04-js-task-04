@@ -36,6 +36,45 @@ const alterNumbersOfList = () => {
 }
 
 // EX 04
+const ageOfDarkness = [
+    { 'Ouro': 45 },
+    { 'Prata': 56 },
+    { 'Madeira': 236 },
+    { 'Pedra': 458 }
+];
+
+const ageOfCastles = [
+    { 'Ouro': 345 },
+    { 'Prata': 568 },
+    { 'Madeira': 789 },
+    { 'Pedra': 897 }
+];
+
+// Neste exercício utilizei o ChatGPT para estudar o comportamento do reduce e map com objetos
+// Para testar outras formas de resolver a questão
+const summarizeAOE = () => {
+    const text = document.getElementById('aoe-summary');
+    const countBags = items => items.reduce((acc, item) => acc + Object.values(item)[0], 0);
+
+    const formatItemList = items => items.map(item => {
+        const [key, value] = Object.entries(item)[0];
+        return `${key} --> ${value}`;
+    });
+
+    const listAODItens = formatItemList(ageOfDarkness);
+    const totalAODBags = countBags(ageOfDarkness);
+
+    const listAOCItens = formatItemList(ageOfCastles);
+    const totalAOCBags = countBags(ageOfCastles);
+
+    text.innerHTML = `<strong>Objetos do meu inventário - Idade das Trevas:</strong> <br><br>
+        ${listAODItens.join('<br>')} <br><br> <strong>Objetos do meu inventário - Idade dos Castelos:</strong> <br><br>
+        ${listAOCItens.join('<br>')} <br><br> <strong>Status do inventário Idade das Trevas:</strong> <br><br>
+        - Total de 4 tipos de itens com ${totalAODBags} sacas <br><br> <strong>Status do inventário Idade dos Castelos:</strong> 
+        <br><br> - Total de 4 tipos de itens com ${totalAOCBags} sacas`;
+
+    text.style.display = 'inline';
+}
 
 // EX 05
 
