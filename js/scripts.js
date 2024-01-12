@@ -101,46 +101,14 @@ const showCheeseMenu = () => {
 
 // EX 06
 const library = [
-    {
-        id: 1,
-        category: 'Terror',
-        title: 'It'
-    },
-    {
-        id: 2,
-        category: 'Terror',
-        title: 'O Exorcista'
-    },
-    {
-        id: 3,
-        category: 'Terror',
-        title: 'Drácula'
-    },
-    {
-        id: 4,
-        category: 'Romance',
-        title: 'O Morro dos Ventos Uivantes'
-    },
-    {
-        id: 5,
-        category: 'Policial',
-        title: 'O Silêncio dos Inocentes'
-    },
-    {
-        id: 6,
-        category: 'Suspense',
-        title: 'Boneco de Neve'
-    },
-    {
-        id: 7,
-        category: 'Suspense',
-        title: 'Bird Box'
-    },
-    {
-        id: 8,
-        category: 'Romance',
-        title: 'Orgulho e Preconceito'
-    },
+    { id: 1, category: 'Terror', title: 'It' },
+    { id: 2, category: 'Terror', title: 'O Exorcista' },
+    { id: 3, category: 'Terror', title: 'Drácula' },
+    { id: 4, category: 'Romance', title: 'O Morro dos Ventos Uivantes' },
+    { id: 5, category: 'Policial', title: 'O Silêncio dos Inocentes' },
+    { id: 6, category: 'Suspense', title: 'Boneco de Neve' },
+    { id: 7, category: 'Suspense', title: 'Bird Box' },
+    { id: 8, category: 'Romance', title: 'Orgulho e Preconceito' },
 ];
 
 const booksCatalog = () => {
@@ -200,3 +168,28 @@ const handleNumericalSets = () => {
 }
 
 // EX 09
+const reports = [
+    { id: 1, customer: 'João', pizza: 'Calabresa', drink: 'Suco' },
+    { id: 2, customer: 'Maria', pizza: 'Postuguesa', drink: 'Cerveja' },
+    { id: 3, customer: 'Carlos', pizza: 'Atum', drink: 'Refrigerante' },
+    { id: 4, customer: 'Ana', pizza: 'Calabresa', drink: 'Suco' },
+    { id: 5, customer: 'Pedro', pizza: 'Frango', drink: 'Refrigerante' },
+];
+
+const pizzasReport = () => {
+    const text = document.getElementById('pizzas-report');
+    const btn = document.getElementById('btn-section-9');
+
+    const pizzas = reports.map(r => r.pizza);
+    const customersAskedRefri = reports.filter(r => r.drink === 'Refrigerante').map(c => c.customer);
+    const customersAskedJuice = reports.filter(r => r.drink === 'Suco').map(c => c.customer);;
+    const customersAskedBeer = reports.filter(r => r.drink === 'Cerveja').map(c => c.customer);;
+
+    text.innerHTML = `<strong>No dia de hoje os pedidos de pizzas foram:</strong> <br> ${pizzas.join(', ')}.<br><br>`;
+    text.innerHTML += `<strong>Os clientes que fizeram pedido com refrigerante foram:</strong> <br> ${customersAskedRefri.join(', ')}. <br><br>`;
+    text.innerHTML += `<strong>Os clientes que fizeram pedido com suco foram:</strong> <br> ${customersAskedJuice.join(', ')}. <br><br>`;
+    text.innerHTML += `<strong>Os clientes que fizeram pedido com cerveja foram:</strong> <br> ${customersAskedBeer.join(', ')}. <br><br>`;
+
+    text.style.display = 'inline';
+    btn.disabled = true;
+}
