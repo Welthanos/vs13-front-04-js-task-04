@@ -77,6 +77,23 @@ const summarizeAOE = () => {
 }
 
 // EX 05
+const showCheeseMenu = () => {
+    const text = document.getElementById('cheese-menu');
+    const menu = ['Mussarela', 'Minas', 'Parmesão', 'Prato', 'Gorgonzola'];
+
+    text.innerHTML = `${menu.join(', ')}.`;
+    const menu1 = menu.concat(['Mascarpone', 'Ricota', 'Provolone']);
+
+    text.innerHTML += `<br><br><strong>Lista atualizada:</strong> ${menu1.join(', ')}.`;
+    menu1.sort();
+
+    text.innerHTML += `<br><br><strong>Lista atualizada em ordem alfabética:</strong> ${menu1.join(', ')}.`;
+    const menu2 = menu1.concat(['Cottage']);
+    menu2.sort();
+
+    text.innerHTML += `<br><br><strong>Lista atualizada:</strong> ${menu2.join(', ')}.`;
+    text.style.display = 'inline';
+}
 
 // EX 06
 
